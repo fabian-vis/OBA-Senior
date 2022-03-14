@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: Avenir;
 }
 
 body {
@@ -29,7 +30,6 @@ body section:first-of-type {
     width: 100%;
 }
 body section:first-of-type h1 {
-    font-family: Avenir;
     font-size: 2.5em;
     margin: 1em 0 0.5em 0;
 }
@@ -37,7 +37,7 @@ body section:first-of-type h1 {
 body section:first-of-type p {
     font-weight: 400;
     margin: 0;
-    font-size: 1.4em;
+    font-size: 1.2em;
     max-width: 50%;
     color: grey;
     
@@ -52,17 +52,14 @@ main > section > input {
     width: 100%;
     padding: 2px 23px 2px 40px;
     outline: 0;
-    background-color:white ;
+    background-color:white;
+    box-shadow: 1px 1px 5px;
   }
 
   main section:nth-of-type(2) {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
       margin: auto;
-      justify-content: flex-start;
       max-width: 500px;
-      height: 30vh;
+      height: 10vh;
       margin-top: 2em;
       position: relative;
   }
@@ -80,6 +77,7 @@ main > section > input {
     visibility: visible;
   }
 
+  /* ------------------------------------------------tooltip styling */
   main section:nth-of-type(2) div {
     position: absolute;
     display: inline-block;
@@ -108,5 +106,52 @@ main > section > input {
       width: 20px;
       height: 20px;
   }
+
+/* ------------------------------------------------article styling */
+
+main section:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+main section:nth-of-type(3) article {
+    box-shadow: 0px 0px 20px;
+    border-radius: 10px;
+    background-color: white;
+    width: 500px;
+    height: 400px;
+    margin-bottom: 1em;
+    text-align: center;
+    padding: 0em 3em;
+}
+
+main section:nth-of-type(3) article p {
+    color: red;
+}
+
+main section:nth-of-type(3) article h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+main section:nth-of-type(3) article div p {
+    color: black;
+    font-size: 1em;
+    margin: 0;
+}
+
+main section:nth-of-type(3) article div p span {
+    font-weight: 700;
+}
+
+main section:nth-of-type(3) article div {
+    text-align: left;
+}
+
+main section:nth-of-type(3) article button {
+    width: 100px;
+}
 
 
