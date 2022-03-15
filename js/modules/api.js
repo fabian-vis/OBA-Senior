@@ -2,6 +2,10 @@ import {
     render
 } from "./render.js"
 
+import {
+    errorState
+} from "./states.js"
+
 const cors = "https://cors-anywhere.herokuapp.com/"
 const endpoint = "https://zoeken.oba.nl/api/v1/search/?q="
 const query = "cursus"
@@ -24,5 +28,6 @@ export const getData = (url) => {
         })
         .catch((err) => {
             console.log(err)
+            errorState()
         })
 }
