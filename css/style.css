@@ -56,6 +56,10 @@ main > section > input {
     box-shadow: 1px 1px 5px;
   }
 
+  main > section > input:focus {    
+      border: 2px solid blue;
+  }
+
   main section:nth-of-type(2) {
       margin: auto;
       max-width: 500px;
@@ -147,11 +151,26 @@ main section:nth-of-type(3) article div p span {
 }
 
 main section:nth-of-type(3) article div {
+    margin: 2em 0em;
     text-align: left;
 }
 
 main section:nth-of-type(3) article button {
-    width: 100px;
+    width: 150px;
+    background: red;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 1em;
 }
+
+main section:nth-of-type(3) article button:focus {
+    transform: scale(1.2);
+    border: 2px solid blue;
+  }
 
 

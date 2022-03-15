@@ -1,22 +1,26 @@
 const container = document.querySelector("main > section:nth-of-type(3)")
 
 export function render(data) {
-    const results = data.results
-    console.log("hallo")
+  const results = data.results
+  console.log("hallo")
 
-    results.forEach((item, i) => {
-        console.log(item)
-        const html = `
+  results.forEach((item, i) => {
+    console.log(item)
+    const html = `
+             
+
                 <article>
-                  <h2>${item.titles[0]}</h2>
-                  <p>${
-                    item.summaries ? item.summaries[0] : "Geen samenvatting"
-                  }</p>
-                  <img src="${
-                    item.coverimages ? item.coverimages[1] : "Geen foto"
-                  }">
-                </article>
+                <p>cursus</p>
+                <h1>${item.titles[0]}</h1>
+                <div>
+                    <p><span>Bestaat uit:</span> joejoe</p>
+                    <p><span>Start datum:</span> joe</p>
+                    <p><span>Prijs:</span> joe</p>
+                    <p><span>Locatie:</span> joe</p>
+                </div>
+                <button>Inschrijven</button>
+            </article>
               `
-        container.insertAdjacentHTML("afterbegin", html)
-    })
+    container.insertAdjacentHTML("afterbegin", html)
+  })
 }
