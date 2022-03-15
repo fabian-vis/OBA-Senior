@@ -125,10 +125,10 @@ main section:nth-of-type(3) article {
     border-radius: 10px;
     background-color: white;
     width: 500px;
-    height: 400px;
+    height: auto;
     margin-bottom: 1em;
     text-align: center;
-    padding: 0em 3em;
+    padding: 1em 3em;
 }
 
 main section:nth-of-type(3) article p {
@@ -172,5 +172,10 @@ main section:nth-of-type(3) article button:focus {
     transform: scale(1.2);
     border: 2px solid blue;
   }
+
+main section:nth-of-type(3) article img {
+    width: 100%;
+    height: auto;
+}
 
 

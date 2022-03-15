@@ -2,14 +2,13 @@ const container = document.querySelector("main > section:nth-of-type(3)")
 
 export function render(data) {
   const results = data.results
-  console.log("hallo")
 
   results.forEach((item, i) => {
     console.log(item)
     const html = `
-             
-
+  
                 <article>
+                <img src="${item.coverimages}">
                 <p>cursus</p>
                 <h1>${item.titles[0]}</h1>
                 <div>

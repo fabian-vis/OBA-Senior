@@ -14,13 +14,12 @@ const config = {
     Authorization: `Bearer ${secret}`,
 }
 
-export const getData = () => {
+export const getData = (url) => {
     fetch(url, config)
         .then((response) => {
             return response.json()
         })
         .then((data) => {
-            console.log(data)
             render(data)
         })
         .catch((err) => {

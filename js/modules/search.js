@@ -1,6 +1,27 @@
-const url = 'https://zoeken.oba.nl/api/v1/search/?q=%22voeding%22&refine=true&authorization=16c19e6083308c984c452600134989ba&sort=act_dt_asc&output=json' //&branch=OBA%20geuzenveld'
+import {
+    getData
+} from "./api.js"
+
 const searchBar = document.querySelector("main > section > input")
 const kruisje = document.querySelector('.kruisje')
+
+export const search = () => {
+    let searchTerm = searchBar.value ? searchBar.value : "cursus"
+
+    const cors = "https://cors-anywhere.herokuapp.com/"
+    const endpoint = "https://zoeken.oba.nl/api/v1/search/?q="
+    const key = "8854ebaac6d5b76ab5a25a372d249680"
+    const detail = "Default"
+    let url = `${cors}${endpoint}${searchTerm}&authorization=${key}&detaillevel=${detail}&output=json`
+    getData(url)
+}
+
+searchBar.addEventListener("keydown", (e) => {
+    // ONLY SEARCHING IF ENTER IS PRESSED
+    if (e.code === "Enter") {
+        search()
+    }
+})
 
 searchBar.addEventListener("keyup", () => {
     if (searchBar.value) {
