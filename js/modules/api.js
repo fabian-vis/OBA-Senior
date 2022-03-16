@@ -12,6 +12,10 @@ import {
     searchBar
 } from "./search.js"
 
+import {
+    laadOpties
+} from "./form.js"
+
 
 
 export const getData = () => {
@@ -35,6 +39,7 @@ export const getData = () => {
         })
         .then((data) => {
             render(data)
+            laadOpties(data)
         })
         .catch((err) => {
             console.log(err)
