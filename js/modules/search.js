@@ -2,18 +2,11 @@ import {
     getData
 } from "./api.js"
 
-const searchBar = document.querySelector("main > section > input")
-const kruisje = document.querySelector('.kruisje')
+export const searchBar = document.querySelector("main > section > input")
+const cross = document.querySelector('.cross')
 
 export const search = () => {
-    let searchTerm = searchBar.value ? searchBar.value : "cursus"
-
-    const cors = "https://cors-anywhere.herokuapp.com/"
-    const endpoint = "https://zoeken.oba.nl/api/v1/search/?q="
-    const key = "8854ebaac6d5b76ab5a25a372d249680"
-    const detail = "Default"
-    let url = `${cors}${endpoint}${searchTerm}&authorization=${key}&detaillevel=${detail}&output=json`
-    getData(url)
+    getData()
 }
 
 searchBar.addEventListener("keydown", (e) => {
@@ -25,13 +18,21 @@ searchBar.addEventListener("keydown", (e) => {
 
 searchBar.addEventListener("keyup", () => {
     if (searchBar.value) {
-        kruisje.classList.add('kruisjeToggle')
+        cross.classList.add('crossToggle')
     } else if (!searchBar.value) {
-        kruisje.classList.remove('kruisjeToggle')
+        cross.classList.remove('crossToggle')
     }
 })
 
-kruisje.addEventListener("click", () => {
+cross.addEventListener("click", () => {
     searchBar.value = "";
-    kruisje.classList.remove('kruisjeToggle')
+    cross.classList.remove('crossToggle')
+    const cors = "https://cors-anywhere.herokuapp.com/"
+    const endpoint = "https://zoeken.oba.nl/api/v1/search/?q=classification:informatieboek%20"
+    const query = searchBar.value
+    const key = "03b058d877ec4276bb63dd1c6e1f3768"
+    const secret = "4289fec4e962a33118340c888699438d"
+    const detail = "Default"
+    const url = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&output=json`
+    getData(url)
 })

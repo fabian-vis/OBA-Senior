@@ -68,7 +68,7 @@ main > section > input {
       position: relative;
   }
 
-  .kruisje {
+  .cross {
     position: absolute;
     top: 15px;
     right: 8px;
@@ -77,7 +77,7 @@ main > section > input {
     visibility: hidden;
   }
 
-  .kruisjeToggle {
+  .crossToggle {
     visibility: visible;
   }
 
@@ -118,13 +118,15 @@ main section:nth-of-type(3) {
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 main section:nth-of-type(3) article {
     box-shadow: 0px 0px 20px;
     border-radius: 10px;
     background-color: white;
-    width: 500px;
+    width: 100%;
     height: auto;
     margin-bottom: 1em;
     text-align: center;
@@ -155,7 +157,7 @@ main section:nth-of-type(3) article div {
     text-align: left;
 }
 
-main section:nth-of-type(3) article button {
+main section:nth-of-type(3) article a {
     width: 150px;
     background: red;
     text-decoration: none;
@@ -166,9 +168,12 @@ main section:nth-of-type(3) article button {
     text-align: center;
     border-radius: 15px;
     font-size: 1em;
+    text-decoration: none;
+    color: white;
 }
 
-main section:nth-of-type(3) article button:focus {
+
+main section:nth-of-type(3) article a:focus {
     transform: scale(1.2);
     border: 2px solid blue;
   }
@@ -179,3 +184,17 @@ main section:nth-of-type(3) article img {
 }
 
 
+/* ------------------------------------------------media querys kleine schermen */
+
+
+@media screen and (max-width: 650px) {
+    body section:first-of-type h1 {
+        font-size: 2em;
+    }
+
+    body section:first-of-type p {
+        max-width: 80%;
+    }
+  }
+
+  
