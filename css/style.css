@@ -276,7 +276,8 @@ main section:nth-of-type(6) article {
     transform: scale(1.2);
     border: 2px solid blue;
   }
-
+  
+/* loading state*/
   .skeleton {
     animation: skeleton-loading 1s linear infinite alternate;
   }
