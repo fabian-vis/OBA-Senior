@@ -44,6 +44,21 @@ body section:first-of-type p {
     
 }
 
+body section:first-of-type a {
+   text-decoration: none;
+   background-color: #e6e6e6;
+   padding: 1em;
+   color: black;
+   border-radius: 1em;
+   margin: 1em 0;
+    
+}
+
+body section:first-of-type a:focus {
+    transform: scale(1.2);
+    border: 2px solid blue;
+}
+
 
 /* ------------------------------------------------inputfield */
 main > section > input {
@@ -135,6 +150,8 @@ main section:nth-of-type(4) {
     align-content: center;
     max-width: 500px;
     margin: 0 auto;
+    position: relative;
+    background-color: white;
 }
 
 main section:nth-of-type(4) article {
@@ -212,6 +229,69 @@ main section:nth-of-type(5) h1{
     color: white;
 }
 
+main section:nth-of-type(5) a{
+    position: absolute;
+    right: 1vw;
+    background-color: #e6e6e6;
+    text-decoration: none;
+    padding: 1em;
+    color: black;
+    border-radius: 1em;
+}
+
+
+main section:nth-of-type(6) {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+main section:nth-of-type(6) article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 20px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    padding: 1em 3em;
+ }
+
+ main section:nth-of-type(6) article a {
+    width: 150px;
+    background: red;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 1em;
+    text-decoration: none;
+    color: white;
+ }
+
+ main section:nth-of-type(6) article a:focus {
+    transform: scale(1.2);
+    border: 2px solid blue;
+  }
+
+  .skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+
+  @keyframes skeleton-loading {
+    0% {
+      height: 500px;
+      background-color: hsl(200, 20%, 70%);
+    }
+  
+    100% {
+      height: 500px;
+      background-color: hsl(200, 20%, 95%);
+    }
+  }
 
 
 /* ------------------------------------------------form styling */
@@ -276,5 +356,13 @@ main form div input:checked + label{
     {
     
         max-width: 100%;
+    }
+    main section:nth-of-type(5) a{
+        font-size: 0.7em;
+        background-color: #e6e6e6;
+        text-decoration: none;
+        padding: 1em;
+        color: black;
+        border-radius: 1em;
     }
 }

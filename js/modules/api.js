@@ -4,7 +4,8 @@ import {
 } from "./render.js"
 
 import {
-    errorState
+    errorState,
+    hideLoading
 } from "./states.js"
 
 import './search.js'
@@ -29,9 +30,6 @@ export const getData = () => {
     const detail = "Default"
     let url = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&output=json`
 
-
-    console.log(url)
-
     const config = {
         Authorization: `Bearer ${secret}`,
     }
@@ -40,9 +38,9 @@ export const getData = () => {
             return response.json()
         })
         .then((data) => {
-            console.log(data)
             render(data)
             showFilters(data)
+            hideLoading()
         })
         .catch((err) => {
             console.log(err)
@@ -57,7 +55,7 @@ export const getData2 = () => {
     const cors = "https://cors-anywhere.herokuapp.com/"
     const query = searchBar.value
     const secret = "4289fec4e962a33118340c888699438d"
-    let url2 = `${cors}http://obaliquid.staging.aquabrowser.nl/onderwijs/api/v1/search/?q=${query}+NOT+lom.lifecycle.contribute.publisher%3Dwikipedia&authorization=a57b7bbd1cde2f6fb7ce5b3f2d1d96e0&output=json`
+    let url2 = `${cors}http://obaliquid.staging.aquabrowser.nl/onderwijs/api/v1/search/?q=${query}+lom.lifecycle.contribute.publisher%3Dwikipedia&authorization=a57b7bbd1cde2f6fb7ce5b3f2d1d96e0&output=json`
 
     console.log(url2)
 
@@ -69,7 +67,7 @@ export const getData2 = () => {
             return response.json()
         })
         .then((data) => {
-            console.log(data)
+            // searchError()
             render2(data)
         })
         .catch((err) => {

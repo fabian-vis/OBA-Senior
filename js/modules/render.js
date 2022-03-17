@@ -6,23 +6,20 @@ export function render(data) {
   const results = data.results
   container.innerHTML = ""
   results.forEach((item, i) => {
-    console.log(item)
+
 
     const html = `
                 <article>
                 <img src="${item.coverimages[1]}">
-                <p>${item.formats[0].text}</p>
                 <h1>${item.titles[0]}</h1>
                 <div>
                  <p><span>Taal:</span></span> ${item.languages}</p>
-                 <p><span>Auteur:</span> ${item.authors} </p>
+                 <p><span>Auteur(s):</span> ${item.authors ? item.authors : "geen auteur"}</p>
                  <p><span>Jaar:</span> ${item.year} </p>
                 </div>
-                <a href="${item.detailLink}">Bekijk boek</a>
+                <a href="${item.detailLink}">Reserveer boek</a>
             </article>
               `
-
-
     container.insertAdjacentHTML("afterbegin", html)
 
   })
@@ -34,15 +31,14 @@ export function render2(data) {
   const results = data.results
   container2.innerHTML = ""
   results.forEach((item, i) => {
-    console.log(item)
 
     const html = `
                 <article>
-                  <p>${item.titles[0]}</p>
+                  <h1>${item.titles[0]}</h1>
+                  <p>${item.summaries[0]}</p>
+                  <a href="${item.detailLink}">Bekijk</a>
                 </article>
               `
-
-
     container2.insertAdjacentHTML("afterbegin", html)
 
   })
@@ -58,14 +54,13 @@ export function displayFilterRender(newData) {
     const html = `
                 <article>
                 <img src="${item.coverimages[1]}">
-                <p>${item.formats[0].text}</p>
                 <h1>${item.titles[0]}</h1>
                 <div>
                  <p><span>Taal:</span></span> ${item.languages}</p>
                  <p><span>Auteur:</span> ${item.authors} </p>
                  <p><span>Jaar:</span> ${item.year} </p>
                 </div>
-                <a href="${item.detailLink}">Bekijk boek</a>
+                <a href="${item.detailLink}">Reserveer boek </a>
             </article>
               `
 
