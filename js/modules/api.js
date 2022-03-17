@@ -18,7 +18,7 @@ import {
 } from "./form.js"
 
 
-
+// url API ophalen van de eerste api
 export const getData = () => {
 
     const cors = "https://cors-anywhere.herokuapp.com/"
@@ -50,6 +50,8 @@ export const getData = () => {
         })
 }
 
+
+// url API ophalen van de tweede api
 export const getData2 = () => {
 
     const cors = "https://cors-anywhere.herokuapp.com/"
@@ -69,7 +71,6 @@ export const getData2 = () => {
         .then((data) => {
             console.log(data)
             render2(data)
-            showFilters(data)
         })
         .catch((err) => {
             console.log(err)
