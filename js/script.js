@@ -3,6 +3,4 @@ import {
 } from "./modules/api.js"
 
 
-
-
 getData()

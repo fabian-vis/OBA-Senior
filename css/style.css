@@ -185,21 +185,44 @@ main section:nth-of-type(3) article img {
 
 /* ------------------------------------------------form styling */
 
-main form {
+ main form {
     display: flex;
     flex-direction: column;
     align-items: center;
-  
+}
+main > form div
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 50%;
 }
 
-main form div {
-   margin: 0 auto;
-   max-width: 80%;
+main > form div input[type='checkbox']
+{
+    display: none;
 }
 
-main form div label {
-    margin-right: 0.5em;
+main > form div label
+{
+    background-color: #e6e6e6;
+    padding: 0.5em 1.5em;
+    margin: 0.5em 0.5em 0 0;
+    border-radius: 1em;
 }
+
+main > form div input[type='checkbox']:checked + label
+{
+    background-color: red;
+    color: white;
+}
+
+
+
+main form div input:checked + label{
+    background: blue;
+}
+
 
 
 
@@ -214,6 +237,13 @@ main form div label {
     body section:first-of-type p {
         max-width: 80%;
     }
-  }
 
-  
+  }
+  @media screen and (max-width: 900px) {
+
+    main > form div
+    {
+    
+        max-width: 100%;
+    }
+}

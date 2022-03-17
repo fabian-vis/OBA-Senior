@@ -5,31 +5,29 @@ import {
 
 const form = document.querySelector('main > form > div')
 
-export function laadOpties(data) {
-    let opties = data.results
-    let jaartallen = []
-    let alleJaartallen = []
-    console.log(alleJaartallen)
+export function showFilters(data) {
+    let options = data.results
+    let years = []
+    let allYears = []
+    console.log(allYears)
 
-    opties.forEach(item => {
-        alleJaartallen.push(item.year)
+    options.forEach(item => {
+        allYears.push(item.year)
     })
 
-    alleJaartallen.forEach(item => {
-        if (jaartallen.indexOf(item) == -1) {
-            jaartallen.push(item);
+    allYears.forEach(item => {
+        if (years.indexOf(item) == -1) {
+            years.push(item);
         }
     });
-    alleJaartallen = []
 
-    jaartallen.sort()
+    years.sort()
     form.innerHTML = ""
-    jaartallen.forEach((item) => {
-
+    years.forEach((item) => {
         form.insertAdjacentHTML('beforeend',
-            ` 
+            `   
                 <input type="checkbox" id="${item}">
-                <label for="${item}">${item}</label
+                <label for="${item}">${item}</label>
             `)
     })
 
@@ -39,12 +37,12 @@ export function laadOpties(data) {
 }
 
 export function filter(data) {
-    let checkedJaartallen = [...form.querySelectorAll('input:checked')].map(el => el.id);
-    console.log(checkedJaartallen)
+    let checkedYears = [...form.querySelectorAll('input:checked')].map(el => el.id);
+    console.log(checkedYears)
 
     let newData = data.results.filter(element => {
         // Als een van de checkbox entries matcht met 1 van de dataset entries
-        if (checkedJaartallen.includes(element.year)) {
+        if (checkedYears.includes(element.year)) {
             // Voeg 'm toe aan de nieuwe array
             return true;
         } else {

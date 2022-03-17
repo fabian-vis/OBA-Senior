@@ -13,7 +13,7 @@ import {
 } from "./search.js"
 
 import {
-    laadOpties
+    showFilters
 } from "./form.js"
 
 
@@ -39,7 +39,7 @@ export const getData = () => {
         })
         .then((data) => {
             render(data)
-            laadOpties(data)
+            showFilters(data)
         })
         .catch((err) => {
             console.log(err)
