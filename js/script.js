@@ -1,6 +1,8 @@
 import {
-    getData
+    getData,
+    getData2
 } from "./modules/api.js"
 
 
 getData()
+getData2()

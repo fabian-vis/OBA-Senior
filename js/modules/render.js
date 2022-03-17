@@ -1,4 +1,8 @@
 const container = document.querySelector("main > section:nth-of-type(3)")
+const container2 = document.querySelector("main > section:nth-of-type(4)")
+
+
+
 export function render(data) {
 
   const results = data.results
@@ -27,6 +31,25 @@ export function render(data) {
   })
 }
 
+export function render2(data) {
+
+  const results = data.results
+  container2.innerHTML = ""
+  results.forEach((item, i) => {
+    // console.log(item)
+    console.log(item)
+
+    const html = `
+                <article>
+                  <p>${item.titles[0]}</p>
+                </article>
+              `
+
+
+    container2.insertAdjacentHTML("afterbegin", html)
+
+  })
+}
 
 export function displayFilterRender(newData) {
   const results = newData

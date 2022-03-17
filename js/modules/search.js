@@ -1,5 +1,6 @@
 import {
-    getData
+    getData,
+    getData2
 } from "./api.js"
 
 export const searchBar = document.querySelector("main > section > input")
@@ -7,6 +8,7 @@ const cross = document.querySelector('.cross')
 
 export const search = () => {
     getData()
+    getData2()
 }
 
 searchBar.addEventListener("keydown", (e) => {
