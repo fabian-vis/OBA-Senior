@@ -1,5 +1,6 @@
 import {
-    displayFilterRender
+    displayFilterRender,
+    render
 } from "./render.js"
 
 const form = document.querySelector('main > form > div')
@@ -20,6 +21,9 @@ export function laadOpties(data) {
         }
     });
     alleJaartallen = []
+
+    jaartallen.sort()
+    form.innerHTML = ""
     jaartallen.forEach((item) => {
 
         form.insertAdjacentHTML('beforeend',
