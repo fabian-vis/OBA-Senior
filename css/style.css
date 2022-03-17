@@ -269,7 +269,7 @@ main section:nth-of-type(6) article {
     border-radius: 15px;
     font-size: 1em;
     text-decoration: none;
-    color: white;
+    color: blue;
  }
 
  main section:nth-of-type(6) article a:focus {
