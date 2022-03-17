@@ -57,7 +57,6 @@ export const getData2 = () => {
     const secret = "4289fec4e962a33118340c888699438d"
     let url2 = `${cors}http://obaliquid.staging.aquabrowser.nl/onderwijs/api/v1/search/?q=${query}+lom.lifecycle.contribute.publisher%3Dwikipedia&authorization=a57b7bbd1cde2f6fb7ce5b3f2d1d96e0&output=json`
 
-    console.log(url2)
 
     const config = {
         Authorization: `Bearer ${secret}`,
