@@ -1,5 +1,5 @@
-const container = document.querySelector("main > section:nth-of-type(3)")
-const container2 = document.querySelector("main > section:nth-of-type(4)")
+const container = document.querySelector("main > section:nth-of-type(4)")
+const container2 = document.querySelector("main > section:nth-of-type(6)")
 
 export function render(data) {
 

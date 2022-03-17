@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: Avenir;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -115,6 +116,20 @@ main > section > input {
 
 main section:nth-of-type(3) {
     display: flex;
+    width: 100%;
+    background-color: black;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+main section:nth-of-type(3) h1{
+    font-size: 2em;
+    color: white;
+}
+
+main section:nth-of-type(4) {
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
@@ -122,7 +137,7 @@ main section:nth-of-type(3) {
     margin: 0 auto;
 }
 
-main section:nth-of-type(3) article {
+main section:nth-of-type(4) article {
     box-shadow: 0px 0px 20px;
     border-radius: 10px;
     background-color: white;
@@ -133,31 +148,31 @@ main section:nth-of-type(3) article {
     padding: 1em 3em;
 }
 
-main section:nth-of-type(3) article p {
+main section:nth-of-type(4) article p {
     color: red;
 }
 
-main section:nth-of-type(3) article h1 {
+main section:nth-of-type(4) article h1 {
     font-size: 1.5em;
     margin: 0;
 }
 
-main section:nth-of-type(3) article div p {
+main section:nth-of-type(4) article div p {
     color: black;
     font-size: 1em;
     margin: 0;
 }
 
-main section:nth-of-type(3) article div p span {
+main section:nth-of-type(4) article div p span {
     font-weight: 700;
 }
 
-main section:nth-of-type(3) article div {
+main section:nth-of-type(4) article div {
     margin: 2em 0em;
     text-align: left;
 }
 
-main section:nth-of-type(3) article a {
+main section:nth-of-type(4) article a {
     width: 150px;
     background: red;
     text-decoration: none;
@@ -173,15 +188,31 @@ main section:nth-of-type(3) article a {
 }
 
 
-main section:nth-of-type(3) article a:focus {
+main section:nth-of-type(4) article a:focus {
     transform: scale(1.2);
     border: 2px solid blue;
   }
 
-main section:nth-of-type(3) article img {
+main section:nth-of-type(4) article img {
     width: 100%;
     height: auto;
 }
+
+main section:nth-of-type(5) {
+    display: flex;
+    width: 100%;
+    background-color: black;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+main section:nth-of-type(5) h1{
+    font-size: 2em;
+    color: white;
+}
+
+
 
 /* ------------------------------------------------form styling */
 
@@ -189,6 +220,7 @@ main section:nth-of-type(3) article img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 30vh;
 }
 main > form div
 {
@@ -237,9 +269,8 @@ main form div input:checked + label{
     body section:first-of-type p {
         max-width: 80%;
     }
-
   }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1100px) {
 
     main > form div
     {
