@@ -9,7 +9,6 @@ export function showFilters(data) {
     let options = data.results
     let years = []
     let allYears = []
-    console.log(allYears)
 
     options.forEach(item => {
         allYears.push(item.year)
