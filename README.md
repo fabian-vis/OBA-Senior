@@ -12,7 +12,7 @@ De website is [hier](https://fabian-vis.github.io/OBA-Senior/ "OBA-Senior") te b
 
 ### Wat ga ik maken
 
-Allereerst wilde ik een website maken waarbij ouderen mensen konden zoeken naar cursussen en lezingen. Dit bleek qua data niet helemaal lekker te werken. Ik heb het proces hiervan wel in mijn documentatie gezet die je hier kunt bekijken: [Wiki](https://github.com/fabian-vis/OBA-Senior/wiki "Wiki"). Toen heb ik ervoor gekozen om mijn onderwerp en dus project om te gooien. Ik wil dus een applicatie maken waar oudere mensen gemakkelijk informatieboeken kunt bekijken. Alle belangrijke informatie moet in 1 keer te zien zijn om zo de gebruiker niet in verwarring te brengen. Ook is er een duidelijke call to action naar de reservering van een boek.
+Allereerst wilde ik een website maken waarbij ouderen mensen konden zoeken naar cursussen en lezingen. Dit bleek qua data niet helemaal lekker te werken. Ik heb het proces hiervan wel in mijn documentatie gezet die je hier kunt bekijken: [Wiki](https://github.com/fabian-vis/OBA-Senior/wiki "Wiki"). Toen heb ik ervoor gekozen om mijn onderwerp en dus project om te gooien. Ik wil dus een applicatie maken waar oudere mensen gemakkelijk informatieboeken kunt bekijken. Alle belangrijke informatie moet in 1 keer te zien zijn om zo de gebruiker niet in verwarring te brengen. Ook is er een duidelijke call to action naar de reservering van een boek. De website is geoptimaliseerd voor tablet.
 
 ### Features
 
