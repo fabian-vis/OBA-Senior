@@ -40,11 +40,11 @@ Dit project is voorzien van een MIT licence.
 
 ### Resources
 
-Docenten en Student-Assistenten
+- Docenten en Student-Assistenten
 
-Medestudenten :)
+- Medestudenten :)
 
-Openbare Bibliotheek Amsterdam
+- Openbare Bibliotheek Amsterdam
 
 - [MDN](https://developer.mozilla.org/en-US/ "MDN")
 
